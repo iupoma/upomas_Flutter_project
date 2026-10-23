@@ -61,7 +61,7 @@ class Homepage extends StatelessWidget {
         ),
       ),
 
-      // Body - Assignment 3
+      // Body
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -72,6 +72,7 @@ class Homepage extends StatelessWidget {
                 alignment: WrapAlignment.center,
                 crossAxisAlignment: WrapCrossAlignment.center,
                 spacing: 5,
+                runSpacing: 5,
                 children: [
                   TextButton(
                     onPressed: () {},
@@ -132,6 +133,44 @@ class Homepage extends StatelessWidget {
               ),
               child: const Text("its body"),
             ),
+
+            // Card
+            SizedBox(
+              height: 200,
+              width: 200,
+              child: Card(
+                margin: const EdgeInsets.all(5),
+                color: const Color.fromARGB(255, 88, 157, 169),
+                shadowColor: Colors.teal,
+                elevation: 20,
+                shape: const BeveledRectangleBorder(),
+                child: const Center(
+                  child: Text(
+                    "Hello card",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+          
+            // Asset Image
+           Image.asset(
+      'assets/images/images.jpg',
+       height: 200,
+       width: 400,
+        ),
+
+         
+
+            // Network Image
+            Image.network(
+             '/assets/images/images.jpg'
+            ),
+
           ],
         ),
       ),
